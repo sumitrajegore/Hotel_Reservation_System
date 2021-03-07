@@ -14,4 +14,19 @@ public class HotelReservationTest {
         List<Hotel> hotellist = hotelReservationService.getHotels();
         Assert.assertTrue(hotellist.contains(hotel));
     }
+	
+	 @Test
+	    public void given3Hotels_whenInvokeFindCheapestHotel_shouldBeAbleToReturnCheapestHotel() {
+	        HotelReservationServise hotelReservationService = new HotelReservationServise();
+	        Hotel Lakewood = new Hotel("Lakewood",110);
+	        Hotel Bridgewood = new Hotel("Bridgewood",160);
+	        Hotel RidgeWood = new Hotel("Ridgewood",220);
+	        hotelReservationService.addHotel(Lakewood);
+	        hotelReservationService.addHotel(Bridgewood);
+	        hotelReservationService.addHotel(RidgeWood);
+	        int countDays = hotelReservationService.countDays("2020-09-10","2020-09-12");
+	        System.out.println("Total count days : " +countDays);
+	        Hotel result = hotelReservationService.findCheapestHotel();
+	        Assert.assertTrue(hotelReservationService.hotelList.contains(result));
+	    }
 }
