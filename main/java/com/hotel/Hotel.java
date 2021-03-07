@@ -9,10 +9,29 @@ public class Hotel {
     
 	
 
+
 	@Override
 	public String toString() {
 		return "Hotel [name=" + name + ", rate=" + rate + ", weekdayrate=" + weekdayrate + ", weekendrate="
 				+ weekendrate + "]";
+    
+    public Hotel(String name, int rate) {
+        this.setName(name);
+        this.setRate(rate);
+    }
+
+	public int getRate() {
+		return rate;
+	}
+
+	@Override
+	public String toString() {
+		return "Hotel [name=" + name + ", rate=" + rate + "]";
+	}
+
+	public void setRate(int rate) {
+		this.rate = rate;
+
 	}
 
 	public String getName() {
