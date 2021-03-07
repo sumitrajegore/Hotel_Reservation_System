@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.stream.Collectors;
+
+import com.google.common.base.Predicate;
 
 public class HotelReservationServise {
 	
@@ -27,7 +30,8 @@ public class HotelReservationServise {
     }
     
     public Hotel findCheapestHotel() {
-        Hotel cheapestRate =  hotelList.stream().min(Comparator.comparing(Hotel::getWeekendrate)).orElseThrow(NoSuchElementException::new);
+    	
+        Hotel cheapestRate  =  hotelList.stream().max(Comparator.comparing(Hotel::getRate)).orElseThrow(NoSuchElementException::new);
         System.out.println(cheapestRate);
         return cheapestRate;
     }
