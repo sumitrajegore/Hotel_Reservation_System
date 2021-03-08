@@ -6,13 +6,14 @@ public class Hotel {
     private int rate;
     private int weekdayrate;
     private int weekendrate;
-    
+    private int rewardweekdayrate;
+    private int rewardweekendrate;
 	
-
 	@Override
 	public String toString() {
-		return "Hotel [name=" + name + ", rate=" + rate + ", weekdayrate=" + weekdayrate + ", weekendrate="
-				+ weekendrate + "]";
+		return "HotelDetails [ name=" + name + ", rate = " + rate + ", weekdayrate = " + weekdayrate + ", weekendrate = "
+				+ weekendrate + ", rewardweekdayrate = " + rewardweekdayrate + ", rewardweekendrate = " + rewardweekendrate
+				+ " ]";
 	}
 
 	public String getName() {
@@ -39,12 +40,14 @@ public class Hotel {
 		this.weekendrate = weekendrate;
 	}
 
-	public Hotel(String name, int rate, int weekdayrate, int weekendrate) {
+	public Hotel(String name, int rate, int weekdayrate, int weekendrate, int rewardweekdayrate, int rewardweekendrate) {
 		super();
 		this.name = name;
 		this.rate = rate;
 		this.weekdayrate = weekdayrate;
 		this.weekendrate = weekendrate;
+		this.rewardweekdayrate = rewardweekdayrate;
+		this.rewardweekendrate = rewardweekendrate;
 	}
 
 	public int getRate() {
@@ -54,5 +57,20 @@ public class Hotel {
 	public void setRate(int rate) {
 		this.rate = rate;
 	}
-   
+
+	public int getRewardweekdayrate() {
+		return rewardweekdayrate;
+	}
+
+	public void setRewardweekdayrate(int rewardweekdayrate) {
+		this.rewardweekdayrate = rewardweekdayrate;
+	}
+
+	public int getRewardweekendrate() {
+		return rewardweekendrate;
+	}
+
+	public void setRewardweekendrate(int rewardweekendrate) {
+		this.rewardweekendrate = rewardweekendrate;
+	}
 }
