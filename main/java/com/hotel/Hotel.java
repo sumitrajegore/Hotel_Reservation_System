@@ -2,7 +2,7 @@ package com.hotel;
 
 public class Hotel {
 	
-	private String name;
+    private String name;
     private int rate;
     private int weekdayrate;
     private int weekendrate;
@@ -15,21 +15,10 @@ public class Hotel {
 				+ weekendrate + ", rewardweekdayrate = " + rewardweekdayrate + ", rewardweekendrate = " + rewardweekendrate
 				+ " ]";
 
-    
-    public Hotel(String name, int rate) {
-        this.setName(name);
-        this.setRate(rate);
-    }
-
 	public int getRate() {
 		return rate;
 	}
-
-	@Override
-	public String toString() {
-		return "Hotel [name=" + name + ", rate=" + rate + "]";
-	}
-
+		
 	public void setRate(int rate) {
 		this.rate = rate;
 	}
@@ -66,14 +55,6 @@ public class Hotel {
 		this.weekendrate = weekendrate;
 		this.rewardweekdayrate = rewardweekdayrate;
 		this.rewardweekendrate = rewardweekendrate;
-	}
-
-	public int getRate() {
-		return rate;
-	}
-
-	public void setRate(int rate) {
-		this.rate = rate;
 	}
 
 	public int getRewardweekdayrate() {
