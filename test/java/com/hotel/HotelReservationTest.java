@@ -21,10 +21,10 @@ public class HotelReservationTest {
 	    	@Test
 		public void given3Hotels_whenInvokeFindCheapestHotel_shouldBeAbleToReturnCheapestHotel() {
 	    	
-	        HotelReservationServise hotelReservationService = new HotelReservationServise();
-	        Hotel Lakewood = new Hotel("Lakewood", 3, 110, 90, 80, 80);
-	        Hotel Bridgewood = new Hotel("Bridgewood", 4, 160, 50, 110, 50);
-	        Hotel RidgeWood = new Hotel("Ridgewood", 5, 220, 150, 110, 40);
+	        	HotelReservationServise hotelReservationService = new HotelReservationServise();
+	        	Hotel Lakewood = new Hotel("Lakewood", 3, 110, 90, 80, 80);
+	        	Hotel Bridgewood = new Hotel("Bridgewood", 4, 160, 50, 110, 50);
+	        	Hotel RidgeWood = new Hotel("Ridgewood", 5, 220, 150, 110, 40);
 
   		  }
 
